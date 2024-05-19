@@ -1,0 +1,47 @@
+﻿@model EditPoliceStationVM
+@{
+    ViewData["Title"] = "Edit Police Station";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h5 class="text-center">Create Police Station</h5>
+
+<div class="row">
+    <div class="container-fluid col-lg-6 col-md-6 col-sm-7">
+
+        <form method="post" asp-action="Edit" asp-controller="PoliceStation">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div>
+                <label asp-for="Name"></label>
+                <input asp-for="Name" class="form-control" placeholder="enter name" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div>
+                <label hidden asp-for="InChargeName"></label>
+                <input hidden asp-for="InChargeName" class="form-control" placeholder="enter name" />
+                <span asp-validation-for="InChargeName" class="text-danger"></span>
+            </div>
+            <div>
+                <label asp-for="Location"></label>
+                <input asp-for="Location" class="form-control" placeholder="enter name" />
+                <span asp-validation-for="Location" class="text-danger"></span>
+            </div>
+            <div>
+                <label asp-for="County"></label>
+                <input asp-for="County" class="form-control" placeholder="enter name" />
+                <span asp-validation-for="County" class="text-danger"></span>
+            </div>
+            <div>
+                <label asp-for="InchargeEmail"></label>
+                <select asp-for="InchargeEmail" class="form-control" asp-items="@ViewBag.SelectList">
+                    <option value="" selected>Select..</option>
+                </select>
+                <span asp-validation-for="InchargeEmail" class="text-danger"></span>
+            </div>
+            <div>
+                <br />
+                <button type="submit" class="btn btn-outline-success mb-2" asp-action="Edit" asp-controller="PoliceStation">Update</button>
+            </div>
+        </form>
+    </div>
+
+</div>

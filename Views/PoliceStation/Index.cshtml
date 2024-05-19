@@ -1,0 +1,63 @@
+﻿@model IEnumerable<PoliceStation>
+@{
+    ViewData["Title"] = "PoliceStations";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row mb-4">
+    <div class="col-md-4 col-lg-4">
+        <a class="btn btn-primary" asp-action="Create" asp-controller="PoliceStation"> Create Police Station</a>
+    </div>
+</div>
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-info alert-dismissible" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        @TempData["Success"]
+    </div>
+}
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-info alert-dismissible" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        @TempData["Message"]
+    </div>
+}
+<div class="row">
+    <div class="container-fluid col-md-12 col-lg-12 justify-content-center">
+        <table class="table table-bordered table-responsive">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Location</th>
+                    <th>County</th>
+                    <th>InCharge Name</th>
+                    <th>InCharge Email</th>
+                    <th class="4">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var station in Model)
+                {
+                    <tr>
+                        <td>@station.Name </td>
+                        <td>@station.Location </td>
+                        <td>@station.County </td>
+                        <td>@station.InChargeName</td>
+                        <td>@station.InchargeEmail</td>
+                        <td class="4">
+                            <a asp-action="Edit" asp-controller="PoliceStation" asp-route-id="@station.Id">Edit</a>
+
+                            <a asp-action="Delete" asp-controller="PoliceStation" asp-route-id="@station.Id" class="text-danger"
+                               onclick="return confirm('Are you sure you want to delete  @station.Name ?')"> Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            <tfoot>
+            </tfoot>
+        </table>
+    </div>
+</div>
+
+
