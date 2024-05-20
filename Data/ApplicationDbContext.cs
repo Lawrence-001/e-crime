@@ -15,17 +15,34 @@ namespace e_crime.Data
         {
             base.OnModelCreating(builder);
 
-            //explicitly define the relationship between users(officers) and police station 
+            //explicitly define the relationship, 1:m,  between police station and users(officers)
             //and what happens if a police station is deleted.
             builder.Entity<ApplicationUser>()
                 .HasOne(p => p.PoliceStation)
                 .WithMany(au => au.PoliceOfficers)
                 .HasForeignKey(p => p.PoliceStationId)
                 .OnDelete(DeleteBehavior.SetNull);
+
+            //m:m relationship between application user and crime
+            builder.Entity<UserCrime>()
+                .HasKey(x => new { x.UserId, x.CrimeId });
+
+            builder.Entity<UserCrime>()
+                .HasOne(au => au.ApplicationUser)
+                .WithMany(uc => uc.UserCrimes)
+                .HasForeignKey(fk => fk.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            builder.Entity<UserCrime>()
+                .HasOne(c => c.Crime)
+                .WithMany(uc => uc.UserCrimes)
+                .HasForeignKey(fk => fk.CrimeId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
 
         public DbSet<Crime> Crimes { get; set; }
         public DbSet<PoliceStation> PoliceStations { get; set; }
+        public DbSet<UserCrime> UserCrimes { get; set; }
 
     }
 }

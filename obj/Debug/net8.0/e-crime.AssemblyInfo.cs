@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("e-crime")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ba5fd392ae98221dcb625ecdcefa646556604116")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+de685e5e0d74257694cbcd799dea1b54b45c7836")]
 [assembly: System.Reflection.AssemblyProductAttribute("e-crime")]
 [assembly: System.Reflection.AssemblyTitleAttribute("e-crime")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

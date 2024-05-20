@@ -1,4 +1,5 @@
-﻿using e_crime.Enums;
+﻿using e_crime.Data;
+using e_crime.Enums;
 using System.ComponentModel.DataAnnotations;
 
 namespace e_crime.Models
@@ -12,6 +13,7 @@ namespace e_crime.Models
         public DateTime DateTime { get; set; }
         public string Description { get; set; } = string.Empty;
         public Status Status { get; set; } = Status.UnAssigned;
+        public ICollection<UserCrime> UserCrimes { get; set; } = new List<UserCrime>();
 
     }
 }
