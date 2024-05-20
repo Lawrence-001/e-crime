@@ -240,6 +240,7 @@ D:\Projects\e-crime\e-crime\obj\Debug\net8.0\e-crime.csproj.CoreCompileInputs.ca
 D:\Projects\e-crime\e-crime\obj\Debug\net8.0\e-crime.MvcApplicationPartsAssemblyInfo.cache
 D:\Projects\e-crime\e-crime\obj\Debug\net8.0\e-crime.RazorAssemblyInfo.cache
 D:\Projects\e-crime\e-crime\obj\Debug\net8.0\e-crime.RazorAssemblyInfo.cs
+D:\Projects\e-crime\e-crime\obj\Debug\net8.0\e-crime.sourcelink.json
 D:\Projects\e-crime\e-crime\obj\Debug\net8.0\staticwebassets.build.json
 D:\Projects\e-crime\e-crime\obj\Debug\net8.0\staticwebassets.development.json
 D:\Projects\e-crime\e-crime\obj\Debug\net8.0\staticwebassets\msbuild.e-crime.Microsoft.AspNetCore.StaticWebAssets.props

@@ -7,6 +7,7 @@ namespace e_crime.Services.Interfaces
         Task<PoliceStation> CreatePoliceStation(PoliceStation policeStation);
         Task<PoliceStation> GetPoliceStationById(int id);
         Task<PoliceStation> EditPoliceStation(PoliceStation policeStation);
+        Task<IEnumerable<PoliceStation>> GetPoliceStations();
         void DeletePoliceStation(int id);
     }
 }

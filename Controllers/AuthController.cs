@@ -58,7 +58,7 @@ namespace e_crime.Controllers
         {
             if (ModelState.IsValid)
             {
-                ApplicationUser user = new()
+                ApplicationUser user = new ApplicationUser()
                 {
                     FirstName = registrationVM.FName,
                     LastName = registrationVM.LName,
@@ -77,6 +77,7 @@ namespace e_crime.Controllers
                 {
                     if (_signInManager.IsSignedIn(User) && User.IsInRole("Super Admin"))
                     {
+                        TempData["Message"] = "User created successfully";
                         //user.CreatedBy = User.
                         return RedirectToAction("AllUsers", "Administration");
                     }

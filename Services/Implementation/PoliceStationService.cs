@@ -24,7 +24,11 @@ namespace e_crime.Services.Implementation
         public async Task<PoliceStation> GetPoliceStationById(int id)
         {
             return await _dbContext.PoliceStations.FirstOrDefaultAsync(x => x.Id == id);
+        }
 
+        public async Task<IEnumerable<PoliceStation>> GetPoliceStations()
+        {
+            return await _dbContext.PoliceStations.ToListAsync();
         }
 
         public async Task<PoliceStation> EditPoliceStation(PoliceStation policeStation)

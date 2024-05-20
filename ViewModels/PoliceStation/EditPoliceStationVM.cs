@@ -19,5 +19,7 @@ namespace e_crime.ViewModels.PoliceStation
         [Required(ErrorMessage = "InCharge Email cannot be empty")]
         [Display(Name = "Station InCharge")]
         public string InchargeEmail { get; set; } = string.Empty;
+        //public string? InchargeId { get; set; }
+        //public List<ApplicationUser>? applicationUsers { get; set; } = new List<ApplicationUser>();
     }
 }

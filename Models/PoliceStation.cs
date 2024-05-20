@@ -12,7 +12,6 @@ namespace e_crime.Models
         public string InchargeEmail { get; set; } = string.Empty;
         public string Location { get; set; } = string.Empty;
         public string County { get; set; } = string.Empty;
-        public string UserId { get; set; } = string.Empty;
-        public ApplicationUser User { get; set; }
+        public ICollection<ApplicationUser> PoliceOfficers { get; set; } = new List<ApplicationUser>();
     }
 }

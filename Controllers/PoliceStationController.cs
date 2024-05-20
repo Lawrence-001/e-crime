@@ -33,15 +33,15 @@ namespace e_crime.Controllers
         /// get users with the role PoliceOfficer
         /// </summary>
         /// <returns></returns>
-        public async Task<List<string>> Officers()
+        public async Task<List<string>> GetOfficersEmail()
         {
 
             //using .net identity
-            var role = await _roleManager.FindByNameAsync("PoliceOfficer");
+            var role = await _roleManager.FindByNameAsync("Officer");
             var userInRole = await _userManager.GetUsersInRoleAsync(role.Name);
             var users = userInRole.Select(x => x.Email).ToList();
 
-
+            //var officerIds = await GetOfficersIds(GetOfficersEmail);
             //using LINQ
             //var officers = (from ur in _context.UserRoles
             //                join r in _context.Roles on ur.RoleId equals r.Id
@@ -55,7 +55,7 @@ namespace e_crime.Controllers
         [HttpGet]
         public async Task<IActionResult> Create()
         {
-            var policeOfficers = await Officers();
+            var policeOfficers = await GetOfficersEmail();
             var selectList = new SelectList(policeOfficers);
             ViewBag.SelectList = selectList;
             return View();
@@ -64,7 +64,7 @@ namespace e_crime.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(PoliceStationVM policeStationVM)
         {
-            var policeOfficers = await Officers();
+            var policeOfficers = await GetOfficersEmail();
 
             var inChargeOfficer = policeOfficers.FirstOrDefault(x => x.Equals(policeStationVM.InchargeEmail));
             if (inChargeOfficer == null)
@@ -85,10 +85,13 @@ namespace e_crime.Controllers
                     Location = policeStationVM.Location,
                     County = policeStationVM.County,
                 };
-                policeStation.UserId = officer.Id;
+
+                await _policeStationService.CreatePoliceStation(policeStation);
+
+                officer.PoliceStationId = policeStation.Id;
+                _context.SaveChanges();
 
                 TempData["Success"] = "Police station created successfully";
-                await _policeStationService.CreatePoliceStation(policeStation);
                 return RedirectToAction("Index");
             }
             return View(policeStationVM);
@@ -98,7 +101,7 @@ namespace e_crime.Controllers
         public async Task<IActionResult> Edit(int id)
         {
             var station = await _policeStationService.GetPoliceStationById(id);
-            var officers = await Officers();
+            var officers = await GetOfficersEmail();
             var selectList = new SelectList(officers);
             ViewBag.SelectList = selectList;
 
@@ -119,17 +122,58 @@ namespace e_crime.Controllers
             return RedirectToAction("Index");
         }
 
+        //public async Task<List<string>> GetOfficersIds(Func<Task<List<string>>> getOfficersEmails)
+        //{
+        //    var emails = await getOfficersEmails(); // Invoke the function to get emails
+        //    var officerIds = new List<string>();
+        //    foreach (var email in emails)
+        //    {
+        //        var user = await _userManager.FindByEmailAsync(email);
+        //        if (user != null)
+        //        {
+        //            officerIds.Add(user.Id);
+        //        }
+        //    }
+        //    return officerIds;
+        //}
+        //public async Task<List<string>> GetOfficersIds()
+        //{
+        //    var role = await _roleManager.FindByNameAsync("Officer");
+        //    var userInRole = await _userManager.GetUsersInRoleAsync(role.Name);
+        //    var users = userInRole.Select(x => x.Id).ToList();
+
+        //    return users;
+        //}
+        public async Task<List<string>> GetOfficersIds()
+        {
+            var emails = await GetOfficersEmail();
+            var ids = new List<string>();
+            foreach (var email in emails)
+            {
+                var user = await _userManager.FindByEmailAsync(email);
+                ids.Add(user.Id);
+            }
+            return ids;
+        }
+
+
         [HttpPost]
         public async Task<IActionResult> Edit(EditPoliceStationVM model)
         {
+            var officers = await GetOfficersIds();
+
+            //var currentInCharge = await _userManager.FindByIdAsync(officerId);
             if (ModelState.IsValid)
             {
                 var station = await _policeStationService.GetPoliceStationById(model.Id);
                 station.Name = model.Name;
                 station.Location = model.Location;
                 station.County = model.County;
-                station.InChargeName = model.InChargeName;
+                //station.InChargeName = currentInCharge.FirstName + " " + currentInCharge.LastName;
+                station.InchargeEmail = model.InchargeEmail;
 
+
+                _context.SaveChanges();
                 await _policeStationService.EditPoliceStation(station);
                 TempData["Success"] = "Police station updated succefully";
                 return RedirectToAction("Index");

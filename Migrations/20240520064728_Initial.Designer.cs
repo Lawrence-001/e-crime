@@ -12,8 +12,8 @@ using e_crime.Data;
 namespace e_crime.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240519161416__addLocationToPoliceStation")]
-    partial class _addLocationToPoliceStation
+    [Migration("20240520064728_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -223,6 +223,9 @@ namespace e_crime.Migrations
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
 
+                    b.Property<int?>("PoliceStationId")
+                        .HasColumnType("int");
+
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
 
@@ -242,6 +245,8 @@ namespace e_crime.Migrations
                         .IsUnique()
                         .HasDatabaseName("UserNameIndex")
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
+
+                    b.HasIndex("PoliceStationId");
 
                     b.ToTable("AspNetUsers", (string)null);
                 });
@@ -304,13 +309,7 @@ namespace e_crime.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("PoliceStations");
                 });
@@ -366,15 +365,19 @@ namespace e_crime.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("e_crime.Data.ApplicationUser", b =>
+                {
+                    b.HasOne("e_crime.Models.PoliceStation", "PoliceStation")
+                        .WithMany("PoliceOfficers")
+                        .HasForeignKey("PoliceStationId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.Navigation("PoliceStation");
+                });
+
             modelBuilder.Entity("e_crime.Models.PoliceStation", b =>
                 {
-                    b.HasOne("e_crime.Data.ApplicationUser", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
+                    b.Navigation("PoliceOfficers");
                 });
 #pragma warning restore 612, 618
         }
