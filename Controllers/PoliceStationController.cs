@@ -23,9 +23,9 @@ namespace e_crime.Controllers
             _context = context;
             _policeStationService = policeStationService;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var stations = _context.PoliceStations.ToList();
+            var stations = await _policeStationService.GetPoliceStations();
             return View(stations);
         }
 
@@ -42,6 +42,7 @@ namespace e_crime.Controllers
             var users = userInRole.Select(x => x.Email).ToList();
 
             //var officerIds = await GetOfficersIds(GetOfficersEmail);
+
             //using LINQ
             //var officers = (from ur in _context.UserRoles
             //                join r in _context.Roles on ur.RoleId equals r.Id

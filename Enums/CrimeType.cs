@@ -8,6 +8,7 @@
         PickPocket = 4,
         Murder = 5,
         Bribery = 6,
+        Vandalism= 7,
 
     }
 }

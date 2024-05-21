@@ -1,0 +1,72 @@
+﻿@inject SignInManager<ApplicationUser> _signInManager
+@model IEnumerable<Crime>
+@{
+    ViewData["Title"] = "Submitted Crimes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="text-center mb-3">
+    <h1 class="display-4"></h1>
+</div>
+
+<div class="row mb-4">
+    <div class="col-md-4 col-lg-4">
+        <a class="btn btn-primary" asp-action="Create" asp-controller="Crimes"> Submit a crime</a>
+        @if (_signInManager.IsSignedIn(User) && User.IsInRole("Officer"))
+        {
+            <a class="btn btn-primary" asp-action="AssignedCrimes" asp-controller="Crimes"> View Assigned Cases</a>
+        }
+        @if (_signInManager.IsSignedIn(User) && User.IsInRole("Super Admin"))
+        {
+            <a class="btn btn-primary" asp-action="Index" asp-controller="Crimes"> View All Submitted Cases</a>
+        }
+    </div>
+
+</div>
+<div class="row">
+    <div class="container-fluid col-md-12 col-lg-12 justify-content-center">
+        @if (TempData["Success"] != null)
+        {
+            <div class="alert alert-info alert-dismissible" role="alert">
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                @TempData["Success"]
+            </div>
+        }
+        <table class="table table-bordered table-responsive">
+            <thead>
+                <tr>
+                    <th>Location</th>
+                    <th>Type of Crime</th>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                    <th class="4">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var crime in Model)
+                {
+                    <tr>
+                        <td>@crime.Location</td>
+                        <td>@crime.CrimeType</td>
+                        <td>@crime.DateTime</td>
+                        <td>@crime.Description</td>
+                        <td>@crime.Status</td>
+                        <td class="4">
+                            @if (!crime.IsEdited)
+                            {
+                                <a asp-action="Edit" asp-controller="Crimes" asp-route-id="@crime.Id">Edit</a>
+                                <span class="text-danger">You can only edit once</span>
+                            }
+                            else
+                            {
+                                <span class="text-danger">No more editing!</span>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            <tfoot>
+            </tfoot>
+        </table>
+    </div>
+</div>

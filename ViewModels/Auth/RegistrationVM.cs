@@ -30,6 +30,7 @@ namespace e_crime.ViewModels.Auth
         [Required(ErrorMessage = "Confirm Password cannot be empty")]
         [Display(Name = "Confirm Password")]
         [DataType(DataType.Password)]
+        [Compare("Password", ErrorMessage = "Password and confirm password do not match")]
         public string ConfirmPassword { get; set; } = string.Empty;
     }
 }

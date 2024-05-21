@@ -23,26 +23,33 @@ namespace e_crime.Data
                 .HasForeignKey(p => p.PoliceStationId)
                 .OnDelete(DeleteBehavior.SetNull);
 
-            //m:m relationship between application user and crime
-            builder.Entity<UserCrime>()
-                .HasKey(x => new { x.UserId, x.CrimeId });
+            //1:m relationship between user and crime
 
-            builder.Entity<UserCrime>()
-                .HasOne(au => au.ApplicationUser)
-                .WithMany(uc => uc.UserCrimes)
-                .HasForeignKey(fk => fk.UserId)
-                .OnDelete(DeleteBehavior.Cascade);
+            builder.Entity<Crime>()
+                .HasOne(au=>au.User)
+                .WithMany(c=>c.Crimes)
+                .HasForeignKey(fk=>fk.UserId)
+                .OnDelete(DeleteBehavior.SetNull);
 
-            builder.Entity<UserCrime>()
-                .HasOne(c => c.Crime)
-                .WithMany(uc => uc.UserCrimes)
-                .HasForeignKey(fk => fk.CrimeId)
-                .OnDelete(DeleteBehavior.Cascade);
+            ////m:m relationship between application user and crime
+            //builder.Entity<UserCrime>()
+            //    .HasKey(x => new { x.UserId, x.CrimeId });
+
+            //builder.Entity<UserCrime>()
+            //    .HasOne(au => au.ApplicationUser)
+            //    .WithMany(uc => uc.UserCrimes)
+            //    .HasForeignKey(fk => fk.UserId)
+            //    .OnDelete(DeleteBehavior.Cascade);
+
+            //builder.Entity<UserCrime>()
+            //    .HasOne(c => c.Crime)
+            //    .WithMany(uc => uc.UserCrimes)
+            //    .HasForeignKey(fk => fk.CrimeId)
+            //    .OnDelete(DeleteBehavior.Cascade);
         }
 
         public DbSet<Crime> Crimes { get; set; }
         public DbSet<PoliceStation> PoliceStations { get; set; }
-        public DbSet<UserCrime> UserCrimes { get; set; }
 
     }
 }

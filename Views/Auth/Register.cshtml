@@ -7,7 +7,7 @@
     <div class="container-fluid col-lg-6 col-md-6 col-sm-7">
 
         <form method="post" asp-action="Register" asp-controller="Auth">
-           
+
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="row">
                 <div class="col-lg-6">
@@ -47,16 +47,21 @@
                     <span asp-validation-for="Email" class="text-danger"></span>
                 </div>
             </div>
-            <div>
-                <label asp-for="Password"></label>
-                <input asp-for="Password" class="form-control" />
-                <span asp-validation-for="Password" class="text-danger"></span>
-            </div>
-            <div>
-                <label asp-for="ConfirmPassword"></label>
-                <input asp-for="ConfirmPassword" class="form-control" />
-                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
-            </div><br />
+            <div class="row">
+                <div class="col-lg-6">
+                    <label asp-for="Password"></label>
+                    <input asp-for="Password" class="form-control" aria-describedby="passwordHelpBlock" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+
+                </div>
+                <div class="col-lg-6">
+                    <label asp-for="ConfirmPassword"></label>
+                    <input asp-for="ConfirmPassword" class="form-control" />
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div>
+            </div> <span id="passwordHelpBlock" class="form-text">
+                Password must be at least 8 characters long.
+            </span><br />
             <div>
                 <button type="submit" class="btn btn-outline-success mb-2" asp-action="Register" asp-controller="Auth">Register</button>
             </div>

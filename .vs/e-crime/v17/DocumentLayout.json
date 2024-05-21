@@ -3,44 +3,28 @@
   "WorkspaceRootPath": "D:\\Projects\\e-crime\\e-crime\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Projects\\e-crime\\e-crime\\Migrations\\20240520115653_defineCrime_User_Relationship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240520115653_defineCrime_User_Relationship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A97E1DDF-7183-4FD9-82B0-289A5FD835A6}|e-crime.csproj|d:\\projects\\e-crime\\e-crime\\data\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A97E1DDF-7183-4FD9-82B0-289A5FD835A6}|e-crime.csproj|solutionrelative:data\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A97E1DDF-7183-4FD9-82B0-289A5FD835A6}|e-crime.csproj|d:\\projects\\e-crime\\e-crime\\models\\usercrime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A97E1DDF-7183-4FD9-82B0-289A5FD835A6}|e-crime.csproj|solutionrelative:models\\usercrime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A97E1DDF-7183-4FD9-82B0-289A5FD835A6}|e-crime.csproj|d:\\projects\\e-crime\\e-crime\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A97E1DDF-7183-4FD9-82B0-289A5FD835A6}|e-crime.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A97E1DDF-7183-4FD9-82B0-289A5FD835A6}|e-crime.csproj|d:\\projects\\e-crime\\e-crime\\models\\crime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A97E1DDF-7183-4FD9-82B0-289A5FD835A6}|e-crime.csproj|solutionrelative:models\\crime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A97E1DDF-7183-4FD9-82B0-289A5FD835A6}|e-crime.csproj|d:\\projects\\e-crime\\e-crime\\views\\crimes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A97E1DDF-7183-4FD9-82B0-289A5FD835A6}|e-crime.csproj|solutionrelative:views\\crimes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A97E1DDF-7183-4FD9-82B0-289A5FD835A6}|e-crime.csproj|d:\\projects\\e-crime\\e-crime\\controllers\\crimescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A97E1DDF-7183-4FD9-82B0-289A5FD835A6}|e-crime.csproj|solutionrelative:controllers\\crimescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A97E1DDF-7183-4FD9-82B0-289A5FD835A6}|e-crime.csproj|d:\\projects\\e-crime\\e-crime\\viewmodels\\crime\\createcrimevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A97E1DDF-7183-4FD9-82B0-289A5FD835A6}|e-crime.csproj|solutionrelative:viewmodels\\crime\\createcrimevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A97E1DDF-7183-4FD9-82B0-289A5FD835A6}|e-crime.csproj|d:\\projects\\e-crime\\e-crime\\views\\home\\submittedcrimes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A97E1DDF-7183-4FD9-82B0-289A5FD835A6}|e-crime.csproj|solutionrelative:views\\home\\submittedcrimes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A97E1DDF-7183-4FD9-82B0-289A5FD835A6}|e-crime.csproj|d:\\projects\\e-crime\\e-crime\\viewmodels\\crime\\editcrimevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A97E1DDF-7183-4FD9-82B0-289A5FD835A6}|e-crime.csproj|solutionrelative:viewmodels\\crime\\editcrimevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A97E1DDF-7183-4FD9-82B0-289A5FD835A6}|e-crime.csproj|d:\\projects\\e-crime\\e-crime\\services\\interfaces\\icrimeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A97E1DDF-7183-4FD9-82B0-289A5FD835A6}|e-crime.csproj|solutionrelative:services\\interfaces\\icrimeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A97E1DDF-7183-4FD9-82B0-289A5FD835A6}|e-crime.csproj|d:\\projects\\e-crime\\e-crime\\viewmodels\\crime\\createcrimevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A97E1DDF-7183-4FD9-82B0-289A5FD835A6}|e-crime.csproj|solutionrelative:viewmodels\\crime\\createcrimevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A97E1DDF-7183-4FD9-82B0-289A5FD835A6}|e-crime.csproj|d:\\projects\\e-crime\\e-crime\\controllers\\crimescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A97E1DDF-7183-4FD9-82B0-289A5FD835A6}|e-crime.csproj|solutionrelative:controllers\\crimescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A97E1DDF-7183-4FD9-82B0-289A5FD835A6}|e-crime.csproj|d:\\projects\\e-crime\\e-crime\\views\\crimes\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A97E1DDF-7183-4FD9-82B0-289A5FD835A6}|e-crime.csproj|solutionrelative:views\\crimes\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A97E1DDF-7183-4FD9-82B0-289A5FD835A6}|e-crime.csproj|d:\\projects\\e-crime\\e-crime\\controllers\\policestationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A97E1DDF-7183-4FD9-82B0-289A5FD835A6}|e-crime.csproj|solutionrelative:controllers\\policestationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -55,128 +39,80 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "20240520115653_defineCrime_User_Relationship.cs",
-              "DocumentMoniker": "D:\\Projects\\e-crime\\e-crime\\Migrations\\20240520115653_defineCrime_User_Relationship.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240520115653_defineCrime_User_Relationship.cs",
-              "ToolTip": "D:\\Projects\\e-crime\\e-crime\\Migrations\\20240520115653_defineCrime_User_Relationship.cs",
-              "RelativeToolTip": "Migrations\\20240520115653_defineCrime_User_Relationship.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAQwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T11:56:54.047Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "D:\\Projects\\e-crime\\e-crime\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
-              "ToolTip": "D:\\Projects\\e-crime\\e-crime\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAqwBEAAABSAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T11:43:55.601Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserCrime.cs",
-              "DocumentMoniker": "D:\\Projects\\e-crime\\e-crime\\Models\\UserCrime.cs",
-              "RelativeDocumentMoniker": "Models\\UserCrime.cs",
-              "ToolTip": "D:\\Projects\\e-crime\\e-crime\\Models\\UserCrime.cs",
-              "RelativeToolTip": "Models\\UserCrime.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T10:51:15.962Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ApplicationUser.cs",
-              "DocumentMoniker": "D:\\Projects\\e-crime\\e-crime\\Data\\ApplicationUser.cs",
-              "RelativeDocumentMoniker": "Data\\ApplicationUser.cs",
-              "ToolTip": "D:\\Projects\\e-crime\\e-crime\\Data\\ApplicationUser.cs",
-              "RelativeToolTip": "Data\\ApplicationUser.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAsAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T10:50:35.781Z",
+              "Title": "SubmittedCrimes.cshtml",
+              "DocumentMoniker": "D:\\Projects\\e-crime\\e-crime\\Views\\Home\\SubmittedCrimes.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\SubmittedCrimes.cshtml",
+              "ToolTip": "D:\\Projects\\e-crime\\e-crime\\Views\\Home\\SubmittedCrimes.cshtml",
+              "RelativeToolTip": "Views\\Home\\SubmittedCrimes.cshtml",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAAAD0AAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-21T10:24:37.14Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Crime.cs",
-              "DocumentMoniker": "D:\\Projects\\e-crime\\e-crime\\Models\\Crime.cs",
-              "RelativeDocumentMoniker": "Models\\Crime.cs",
-              "ToolTip": "D:\\Projects\\e-crime\\e-crime\\Models\\Crime.cs",
-              "RelativeToolTip": "Models\\Crime.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAAAAsAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T10:43:53.063Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Projects\\e-crime\\e-crime\\Views\\Crimes\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Crimes\\Index.cshtml",
-              "ToolTip": "D:\\Projects\\e-crime\\e-crime\\Views\\Crimes\\Index.cshtml",
-              "RelativeToolTip": "Views\\Crimes\\Index.cshtml",
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\Projects\\e-crime\\e-crime\\Views\\Crimes\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Crimes\\Edit.cshtml",
+              "ToolTip": "D:\\Projects\\e-crime\\e-crime\\Views\\Crimes\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Crimes\\Edit.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-20T10:22:10.268Z",
+              "WhenOpened": "2024-05-21T10:21:29.081Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "EditCrimeVM.cs",
-              "DocumentMoniker": "D:\\Projects\\e-crime\\e-crime\\ViewModels\\Crime\\EditCrimeVM.cs",
-              "RelativeDocumentMoniker": "ViewModels\\Crime\\EditCrimeVM.cs",
-              "ToolTip": "D:\\Projects\\e-crime\\e-crime\\ViewModels\\Crime\\EditCrimeVM.cs",
-              "RelativeToolTip": "ViewModels\\Crime\\EditCrimeVM.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAxwBAAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T10:16:37.963Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "CreateCrimeVM.cs",
               "DocumentMoniker": "D:\\Projects\\e-crime\\e-crime\\ViewModels\\Crime\\CreateCrimeVM.cs",
               "RelativeDocumentMoniker": "ViewModels\\Crime\\CreateCrimeVM.cs",
               "ToolTip": "D:\\Projects\\e-crime\\e-crime\\ViewModels\\Crime\\CreateCrimeVM.cs",
               "RelativeToolTip": "ViewModels\\Crime\\CreateCrimeVM.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAwAAAApAAAA",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAxwBEAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T10:16:25.098Z"
+              "WhenOpened": "2024-05-21T10:17:50.97Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ICrimeService.cs",
-              "DocumentMoniker": "D:\\Projects\\e-crime\\e-crime\\Services\\Interfaces\\ICrimeService.cs",
-              "RelativeDocumentMoniker": "Services\\Interfaces\\ICrimeService.cs",
-              "ToolTip": "D:\\Projects\\e-crime\\e-crime\\Services\\Interfaces\\ICrimeService.cs",
-              "RelativeToolTip": "Services\\Interfaces\\ICrimeService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAApAAAA",
+              "DocumentIndex": 1,
+              "Title": "EditCrimeVM.cs",
+              "DocumentMoniker": "D:\\Projects\\e-crime\\e-crime\\ViewModels\\Crime\\EditCrimeVM.cs",
+              "RelativeDocumentMoniker": "ViewModels\\Crime\\EditCrimeVM.cs",
+              "ToolTip": "D:\\Projects\\e-crime\\e-crime\\ViewModels\\Crime\\EditCrimeVM.cs",
+              "RelativeToolTip": "ViewModels\\Crime\\EditCrimeVM.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAxwBEAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T09:50:26.884Z"
+              "WhenOpened": "2024-05-21T10:13:52.812Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
+              "Title": "PoliceStationController.cs",
+              "DocumentMoniker": "D:\\Projects\\e-crime\\e-crime\\Controllers\\PoliceStationController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PoliceStationController.cs",
+              "ToolTip": "D:\\Projects\\e-crime\\e-crime\\Controllers\\PoliceStationController.cs",
+              "RelativeToolTip": "Controllers\\PoliceStationController.cs",
+              "ViewState": "AQIAAKMAAAAAAAAAAADwvwAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T10:09:57.718Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "CrimesController.cs",
               "DocumentMoniker": "D:\\Projects\\e-crime\\e-crime\\Controllers\\CrimesController.cs",
               "RelativeDocumentMoniker": "Controllers\\CrimesController.cs",
               "ToolTip": "D:\\Projects\\e-crime\\e-crime\\Controllers\\CrimesController.cs",
               "RelativeToolTip": "Controllers\\CrimesController.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABEAAAAgAAAA",
+              "ViewState": "AQIAAFoAAAAAAAAAAAAowGcAAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T09:50:21.524Z"
+              "WhenOpened": "2024-05-20T09:50:21.524Z",
+              "EditorCaption": ""
             }
           ]
         }

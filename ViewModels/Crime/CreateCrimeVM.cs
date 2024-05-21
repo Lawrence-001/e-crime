@@ -8,6 +8,7 @@ namespace e_crime.ViewModels.Crime
         [Required(ErrorMessage = "Location cannot be empty")]
         public string Location { get; set; } = string.Empty;
         [Required(ErrorMessage = "Type of crime cannot be empty")]
+        [Display(Name ="Type of Crime")]
         public CrimeType CrimeType { get; set; }
         [Required(ErrorMessage = "Date of crime cannot be empty")]
         [Display(Name = "Date of crime")]
@@ -15,5 +16,6 @@ namespace e_crime.ViewModels.Crime
         [Required(ErrorMessage = "Crime description cannot be empty")]
         public string Description { get; set; } = string.Empty;
         public Status Status { get; set; } = Status.UnAssigned;
+        public bool IsEdited { get; set; } = false;
     }
 }

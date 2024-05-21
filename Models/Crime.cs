@@ -13,7 +13,11 @@ namespace e_crime.Models
         public DateTime DateTime { get; set; }
         public string Description { get; set; } = string.Empty;
         public Status Status { get; set; } = Status.UnAssigned;
-        public ICollection<UserCrime> UserCrimes { get; set; } = new List<UserCrime>();
+        public bool IsEdited { get; set; } = false;
+        public string? UserId { get; set; }
+        public ApplicationUser User { get; set; }
+
+        //public ICollection<UserCrime> UserCrimes { get; set; } = new List<UserCrime>();
 
     }
 }

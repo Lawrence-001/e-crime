@@ -1,8 +1,63 @@
-﻿
+﻿@model IEnumerable<Crime>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<div class="text-center mb-3">
+    <h1 class="display-4"></h1>
+</div>
+
+<div class="row mb-4">
+    <div class="col-md-4 col-lg-4">
+        <a class="btn btn-primary" asp-action="Create" asp-controller="Crimes"> Submit a crime</a>
+    </div>
+</div>
+<div class="row justify-content-center col-lg-8 col-md-8">
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-info alert-dismissible" role="alert">
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            @TempData["Success"]
+        </div>
+    }
+</div>
+<div class="row">
+    <div class="container-fluid col-md-12 col-lg-12 justify-content-center">
+
+        <table class="table table-bordered table-responsive">
+            <thead>
+                <tr>
+                    <th>Location</th>
+                    <th>Type of Crime</th>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                    <th class="4">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var crime in Model)
+                {
+                    <tr>
+                        <td>@crime.Location</td>
+                        <td>@crime.CrimeType</td>
+                        <td>@crime.DateTime</td>
+                        <td>@crime.Description</td>
+                        <td>@crime.Status</td>
+                        <td class="4">
+                            <a asp-action="EditProduct" asp-controller="Home" asp-route-id="@crime.Id">Edit</a>
+                            @* only officers can delete a crime *@
+                            <a asp-action="DeleteProduct" asp-controller="Home" asp-route-id="@crime.Id" class="text-danger"> Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            <tfoot>
+            </tfoot>
+        </table>
+    </div>
+
+</div>
 
 
