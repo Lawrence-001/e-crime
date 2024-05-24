@@ -52,5 +52,30 @@ namespace e_crime.Services.Implementation
         {
             return await _context.Crimes.FirstOrDefaultAsync(x => x.Id == id);
         }
+
+        /// <summary>
+        /// Get crimes by officer location
+        /// </summary>
+        /// <param name="officerEmail"></param>
+        /// <param name="officerLocation"></param>
+        /// <returns></returns>
+        public async Task<List<Crime>> GetCrimesByOfficerLocation(string officerEmail, string officerLocation)
+        {
+            bool isIncharge = await _context.PoliceStations.AnyAsync(x => x.InchargeEmail.Equals(officerEmail));
+
+            IQueryable<Crime> crimes = _context.Crimes.Where(c => c.Location.Equals(officerLocation));
+
+            if (isIncharge)
+            {
+                crimes = _context.Crimes;
+            }
+
+            return await crimes.ToListAsync();
+        }
+
+        public Task<List<Crime>> AssignCrimeToOfficer(string officerId, int crimeId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

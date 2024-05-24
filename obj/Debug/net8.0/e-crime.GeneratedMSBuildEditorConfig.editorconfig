@@ -66,12 +66,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3JpbWVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Projects/e-crime/e-crime/Views/Crimes/CrimeByPoliceStation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3JpbWVzXENyaW1lQnlQb2xpY2VTdGF0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Projects/e-crime/e-crime/Views/Crimes/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3JpbWVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Projects/e-crime/e-crime/Views/Crimes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3JpbWVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/e-crime/e-crime/Views/Home/AboutUs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dFVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Projects/e-crime/e-crime/Views/Home/Index.cshtml]

@@ -1,30 +1,14 @@
 ﻿@model IEnumerable<Crime>
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Crime By PoliceStation";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="text-center mb-3">
-    <h1 class="display-4"></h1>
-</div>
-
-<div class="row mb-4">
-    <div class="col-md-4 col-lg-4">
-        <a class="btn btn-primary" asp-action="Create" asp-controller="Crimes"> Submit a crime</a>
-    </div>
-</div>
-<div class="row justify-content-center col-lg-8 col-md-8">
-    @if (TempData["Success"] != null)
-    {
-        <div class="alert alert-info alert-dismissible" role="alert">
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            @TempData["Success"]
-        </div>
-    }
+    <h4 class="text-center">Crimes reported at Police Station </h4>
 </div>
 <div class="row">
     <div class="container-fluid col-md-12 col-lg-12 justify-content-center">
-
         <table class="table table-bordered table-responsive">
             <thead>
                 <tr>
@@ -46,9 +30,10 @@
                         <td>@crime.Description</td>
                         <td>@crime.Status</td>
                         <td class="4">
-                            <a asp-action="Edit" asp-controller="Crimes" asp-route-id="@crime.Id">Edit</a>
-                            @* only officers admin can delete a crime *@
-                            <a asp-action="Delete" asp-controller="Crimes" asp-route-id="@crime.Id" class="text-danger"> Delete</a>
+                            @if (!crime.IsEdited)
+                            {
+                                <a asp-action="AssignCrime" asp-controller="Crimes" asp-route-id="@crime.Id">Assign to Officer</a>
+                            }
                         </td>
                     </tr>
                 }
@@ -57,7 +42,5 @@
             </tfoot>
         </table>
     </div>
-
 </div>
-
 

@@ -16,6 +16,8 @@ namespace e_crime.Models
         public bool IsEdited { get; set; } = false;
         public string? UserId { get; set; }
         public ApplicationUser User { get; set; }
+        public string? AssignedTo { get; set; }
+        public ApplicationUser AssignedOfficer { get; set; }
 
         //public ICollection<UserCrime> UserCrimes { get; set; } = new List<UserCrime>();
 

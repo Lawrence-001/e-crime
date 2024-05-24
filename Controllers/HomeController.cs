@@ -27,6 +27,16 @@ namespace e_crime.Controllers
             return View();
         }
 
+        public IActionResult AboutUs()
+        {
+            return View();
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         [Authorize]
         public async Task<IActionResult> SubmittedCrimes()
         {

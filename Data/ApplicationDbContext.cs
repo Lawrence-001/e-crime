@@ -31,6 +31,13 @@ namespace e_crime.Data
                 .HasForeignKey(fk=>fk.UserId)
                 .OnDelete(DeleteBehavior.SetNull);
 
+            //1:m relationship between user(officer) and crime
+            builder.Entity<Crime>()
+               .HasOne(ao=>ao.AssignedOfficer)
+               .WithMany(ac=>ac.AssignedCrimes)
+               .HasForeignKey(fk => fk.AssignedTo)
+               .OnDelete(DeleteBehavior.NoAction);
+
             ////m:m relationship between application user and crime
             //builder.Entity<UserCrime>()
             //    .HasKey(x => new { x.UserId, x.CrimeId });

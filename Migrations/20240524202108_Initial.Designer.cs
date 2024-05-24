@@ -12,7 +12,7 @@ using e_crime.Data;
 namespace e_crime.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240520064728_Initial")]
+    [Migration("20240524202108_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -259,6 +259,9 @@ namespace e_crime.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("AssignedTo")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<int>("CrimeType")
                         .HasColumnType("int");
 
@@ -269,6 +272,9 @@ namespace e_crime.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("IsEdited")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Location")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -276,7 +282,14 @@ namespace e_crime.Migrations
                     b.Property<int>("Status")
                         .HasColumnType("int");
 
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("AssignedTo");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Crimes");
                 });
@@ -373,6 +386,30 @@ namespace e_crime.Migrations
                         .OnDelete(DeleteBehavior.SetNull);
 
                     b.Navigation("PoliceStation");
+                });
+
+            modelBuilder.Entity("e_crime.Models.Crime", b =>
+                {
+                    b.HasOne("e_crime.Data.ApplicationUser", "AssignedOfficer")
+                        .WithMany("AssignedCrimes")
+                        .HasForeignKey("AssignedTo")
+                        .OnDelete(DeleteBehavior.NoAction);
+
+                    b.HasOne("e_crime.Data.ApplicationUser", "User")
+                        .WithMany("Crimes")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.Navigation("AssignedOfficer");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("e_crime.Data.ApplicationUser", b =>
+                {
+                    b.Navigation("AssignedCrimes");
+
+                    b.Navigation("Crimes");
                 });
 
             modelBuilder.Entity("e_crime.Models.PoliceStation", b =>

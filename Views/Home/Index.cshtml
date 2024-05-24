@@ -1,8 +1,43 @@
-﻿@{
+﻿@inject SignInManager<ApplicationUser> _signInManager
+@{
     ViewData["Title"] = "Home Page";
 }
+<div class="row">
+    <div class="container-fluid justify-content-center col-lg-6">
+        @if (_signInManager.IsSignedIn(User) && User.IsInRole("Super Admin") || User.IsInRole("Officer") || User.IsInRole("User"))
+        {
+            <div class="row">
+                <div class="col-lg-6">
+                    <a class="btn btn-primary mb-3 w-100" asp-area="" asp-controller="Crimes" asp-action="Create">Submit a Crime</a>
+                </div>
+                <div class="col-lg-6">
+                    <a class="btn btn-success w-100" asp-area="" asp-controller="Home" asp-action="SubmittedCrimes">View Submitted Crimes</a>
+                </div>
+            </div>
+        }
+        @if (_signInManager.IsSignedIn(User) && User.IsInRole("Officer"))
+        {
+            <div class="row">
+                <div class="col-lg-6">
+                    <a class="btn btn-secondary w-100" asp-area="" asp-controller="Crimes" asp-action="AssignedCases">View Assinged Cases</a>
+                </div>
+                <div class="col-lg-6">
+                    <a class="btn btn-info w-100" asp-area="" asp-controller="Crimes" asp-action="CrimeByPoliceStation">Cases Submitted to Police Station</a>
+                </div>
+            </div>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    
+        }
+
+        @if (_signInManager.IsSignedIn(User) && User.IsInRole("Super Admin"))
+        {
+            <div class="row">
+                <div class="col-lg-6">
+                    <a class="btn btn-secondary mb-3 w-100" asp-area="" asp-controller="PoliceStation" asp-action="Index">Manage Police Stations</a>
+                </div>
+                <div class="col-lg-6">
+                    <a class="btn btn-info w-100" asp-action="Index" asp-controller="Crimes"> View All Submitted Cases</a>
+                </div>
+            </div>
+        }
+    </div>
 </div>

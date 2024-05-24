@@ -13,11 +13,11 @@
         <a class="btn btn-primary" asp-action="Create" asp-controller="Crimes"> Submit a crime</a>
         @if (_signInManager.IsSignedIn(User) && User.IsInRole("Officer"))
         {
-            <a class="btn btn-primary" asp-action="AssignedCrimes" asp-controller="Crimes"> View Assigned Cases</a>
+            <a class="btn btn-info" asp-action="AssignedCrimes" asp-controller="Crimes"> View Assigned Cases</a>
         }
         @if (_signInManager.IsSignedIn(User) && User.IsInRole("Super Admin"))
         {
-            <a class="btn btn-primary" asp-action="Index" asp-controller="Crimes"> View All Submitted Cases</a>
+            <a class="btn btn-info" asp-action="Index" asp-controller="Crimes"> View All Submitted Cases</a>
         }
     </div>
 
