@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Crime>
+@{
+    ViewData["Title"] = "Crime By PoliceStation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="text-center mb-3">
+    <h4 class="text-center">Crimes reported at Police Station </h4>
+</div>
+<div class="row">
+    <div class="container-fluid col-md-12 col-lg-12 justify-content-center">
+        <table class="table table-bordered table-responsive">
+            <thead>
+                <tr>
+                    <th>Location</th>
+                    <th>Type of Crime</th>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                    <th class="4">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var crime in Model)
+                {
+                    <tr>
+                        <td>@crime.Location</td>
+                        <td>@crime.CrimeType</td>
+                        <td>@crime.DateTime</td>
+                        <td>@crime.Description</td>
+                        <td>@crime.Status</td>
+                        <td class="4">
+                            @if (!crime.IsEdited)
+                            {
+                                <a asp-action="AssignCrime" asp-controller="Crimes" asp-route-id="@crime.Id">Assign to Officer</a>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            <tfoot>
+            </tfoot>
+        </table>
+    </div>
+</div>
+

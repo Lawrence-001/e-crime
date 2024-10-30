@@ -1,0 +1,171 @@
+﻿@inject SignInManager<ApplicationUser> _signInManager
+@{
+    ViewData["Title"] = "Home Page";
+    var firstName = User.Claims.FirstOrDefault(c => c.Type == "FirstName")?.Value;
+
+}
+
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box d-flex align-items-center justify-content-between">
+            <!--Start of Page Title-->
+            <h4 class="mb-0">Services</h4>
+            <!--End of Page Title-->
+            <!--Start of Breadcrumb-->
+            <div class="page-title-right">
+                <ol class="breadcrumb m-0">
+                    <li class="breadcrumb-item"><a href="javascript: void(0);">e-crime</a></li>
+                    <li class="breadcrumb-item active">Services</li>
+                </ol>
+            </div>
+            <!--End of Breadcrumb-->
+        </div>
+    </div>
+</div>
+<!-- end page title -->
+<!--Start of Page Body-->
+@if (_signInManager.IsSignedIn(User) && User.IsInRole("Super Admin") || User.IsInRole("Officer") || User.IsInRole("User"))
+{
+    <div class="row">
+        <div class="col-12">
+            <p>Hi<b></b>, welcome to the e-crime Portal.</p>
+        </div>
+        <div class="col-lg-6 col-xl-6">
+            <div class="card">
+                <div class="row g-0 align-items-center p-2">
+                    <div class="col-md-4">
+                        <img class="card-img img-fluid" src="/dist/assets/images/small/img-2.jpg" alt="Card image">
+                    </div><!-- end col-->
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">E-Crime Portal</h5>
+                            <p class="card-text">ID: 31843478</p>
+                            <p class="card-text">
+                                <small class="text-muted">e-crime</small>
+                                <a asp-area="" asp-controller="Home" asp-action="SubmittedCrimes" class="btn btn-primary float-end">View Submitted Cases</a>
+                            </p>
+                        </div><!-- end card body -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end card -->
+        </div><!-- end col --> <!-- end col-->
+
+        <div class="col-lg-6 col-xl-6">
+            <div class="card">
+                <div class="row g-0 align-items-center p-2">
+                    <div class="col-md-4">
+                        <img class="card-img img-fluid" src="/dist/assets/images/small/img-2.jpg" alt="Card image">
+                    </div><!-- end col-->
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">E-Crime Portal</h5>
+                            <p class="card-text">ID: 31843478</p>
+                            <p class="card-text">
+                                <small class="text-muted">e-crime</small>
+                                <a asp-area="" asp-controller="Crimes" asp-action="Create" class="btn btn-primary float-end">Submit a Crime</a>
+                            </p>
+                        </div><!-- end card body -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end card -->
+        </div><!-- end col --> <!-- end col-->
+    </div>
+}
+
+@if (_signInManager.IsSignedIn(User) && User.IsInRole("Officer"))
+{
+    <div class="row">
+        <div class="col-12">
+            <p>Hi <b>Lawrence</b>, welcome to the e-crime Portal.</p>
+        </div>
+        <div class="col-lg-6 col-xl-6">
+            <div class="card">
+                <div class="row g-0 align-items-center p-2">
+                    <div class="col-md-4">
+                        <img class="card-img img-fluid" src="/dist/assets/images/small/img-2.jpg" alt="Card image">
+                    </div><!-- end col-->
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">E-Crime Portal</h5>
+                            <p class="card-text">ID: 31843478</p>
+                            <p class="card-text">
+                                <small class="text-muted">e-crime</small>
+                                <a asp-area="" asp-controller="Crimes" asp-action="AssignedCases" class="btn btn-primary float-end">View Assinged Cases</a>
+                            </p>
+                        </div><!-- end card body -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end card -->
+        </div><!-- end col --> <!-- end col-->
+
+        <div class="col-lg-6 col-xl-6">
+            <div class="card">
+                <div class="row g-0 align-items-center p-2">
+                    <div class="col-md-4">
+                        <img class="card-img img-fluid" src="/dist/assets/images/small/img-2.jpg" alt="Card image">
+                    </div><!-- end col-->
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">E-Crime Portal</h5>
+                            <p class="card-text">ID: 31843478</p>
+                            <p class="card-text">
+                                <small class="text-muted">e-crime</small>
+                                <a asp-area="" asp-controller="Crimes" asp-action="CrimeByPoliceStation" class="btn btn-primary float-end">Cases Submitted to Police Station</a>
+                            </p>
+                        </div><!-- end card body -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end card -->
+        </div><!-- end col --> <!-- end col-->
+    </div>
+}
+@if (_signInManager.IsSignedIn(User) && User.IsInRole("Super Admin") || User.IsInRole("Admin"))
+{
+    <div class="row">
+        <div class="col-12">
+            @* <p>Hi <b>Lawrence</b>, welcome to the e-crime Portal.</p> *@
+        </div>
+        <div class="col-lg-6 col-xl-6">
+            <div class="card">
+                <div class="row g-0 align-items-center p-2">
+                    <div class="col-md-4">
+                        <img class="card-img img-fluid" src="/dist/assets/images/small/img-2.jpg" alt="Card image">
+                    </div><!-- end col-->
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">E-Crime Portal</h5>
+                            <p class="card-text">ID: 31843478</p>
+                            <p class="card-text">
+                                <small class="text-muted">e-crime</small>
+                                <a asp-area="" asp-controller="PoliceStation" asp-action="Index" class="btn btn-primary float-end">Manage Police Stations</a>
+                            </p>
+                        </div><!-- end card body -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end card -->
+        </div><!-- end col --> <!-- end col-->
+
+        <div class="col-lg-6 col-xl-6">
+            <div class="card">
+                <div class="row g-0 align-items-center p-2">
+                    <div class="col-md-4">
+                        <img class="card-img img-fluid" src="/dist/assets/images/small/img-2.jpg" alt="Card image">
+                    </div><!-- end col-->
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">E-Crime Portal</h5>
+                            <p class="card-text">ID: 31843478</p>
+                            <p class="card-text">
+                                <small class="text-muted">e-crime</small>
+                                <a asp-area="" asp-action="Index" asp-controller="Crimes" class="btn btn-primary float-end"> View All Submitted Cases</a>
+                            </p>
+                        </div><!-- end card body -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end card -->
+        </div><!-- end col --> <!-- end col-->
+    </div>
+}
+<!-- end row-->
+<!--Start of Page Body-->

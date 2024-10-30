@@ -1,0 +1,71 @@
+﻿@model PoliceStationVM
+@{
+    ViewData["Title"] = "Create Police Station";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box d-flex align-items-center justify-content-between">
+            <!--Start of Page Title-->
+            <h4 class="mb-0">Create Police Station</h4>
+            <!--End of Page Title-->
+            <!--Start of Breadcrumb-->
+            <div class="page-title-right">
+                <ol class="breadcrumb m-0">
+                    <li class="breadcrumb-item"><a href="javascript: void(0);"></a>E-Crime Portal</li>
+                    <li class="breadcrumb-item active">Police Stations</li>
+                </ol>
+            </div>
+            <!--End of Breadcrumb-->
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="container-fluid col-lg-7 col-md-6 col-sm-7">
+        <div class="card">
+            <h5 class="text-center card-title mt-2">Create Police Station</h5>
+            <div class="card-body">
+                <form method="post" asp-action="Create" asp-controller="PoliceStation">
+                    @if (TempData["Success"] != null)
+                    {
+                        <div class="alert alert-info alert-dismissible" role="alert">
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            @TempData["Success"]
+                        </div>
+                    }
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div>
+                        <label asp-for="Name"></label>
+                        <input asp-for="Name" class="form-control" placeholder="enter name" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div>
+                        <label asp-for="Location"></label>
+                        <input asp-for="Location" class="form-control" placeholder="enter name" />
+                        <span asp-validation-for="Location" class="text-danger"></span>
+                    </div>
+                    <div>
+                        <label asp-for="County"></label>
+                        <input asp-for="County" class="form-control" placeholder="enter name" />
+                        <span asp-validation-for="County" class="text-danger"></span>
+                    </div>
+                    <div>
+                        <label asp-for="InchargeEmail"></label>
+                        <select asp-for="InchargeEmail" class="form-control" asp-items="@ViewBag.SelectList">
+                            <option value="" selected>Select..</option>
+                        </select>
+                        <span asp-validation-for="InchargeEmail" class="text-danger"></span>
+                    </div>
+                    <div>
+                        <br />
+                        <button type="submit" class="btn btn-primary" asp-action="Create" asp-controller="PoliceStation">Submit</button>
+                        <a asp-action="Index" asp-controller="PoliceStation" class="btn btn-success">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

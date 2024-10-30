@@ -1,0 +1,69 @@
+﻿@model IEnumerable<ApplicationUser>
+@{
+    ViewData["Title"] = "Station Officers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var station = ViewBag.StationName;
+}
+
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box d-flex align-items-center justify-content-between">
+            <!--Start of Page Title-->
+            <h4 class="mb-0">Station Police Officers</h4>
+            <!--End of Page Title-->
+            <!--Start of Breadcrumb-->
+            <div class="page-title-right">
+                <ol class="breadcrumb m-0">
+                    <li class="breadcrumb-item"><a href="javascript: void(0);"></a>E-Crime Portal</li>
+                    <li class="breadcrumb-item active">Police Officers</li>
+                </ol>
+            </div>
+            <!--End of Breadcrumb-->
+        </div>
+    </div>
+</div>
+<h5 class="text-center">List of Police Officers in @station</h5>
+<div class="row mb-4">
+    <div class="col-md-4 col-lg-4">
+        <a class="btn btn-primary" asp-action="AddOfficers" asp-controller="PoliceStation">  Add or Remove Officers</a>
+    </div>
+</div>
+<div class="row">
+    <div class="container-fluid col-md-12 col-lg-12 justify-content-center">
+        <div class="card">
+            <div class="card-body">
+                <table class="table table-bordered table-responsive">
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                           @* <th>Action</th> *@
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var user in Model)
+                        {
+                            <tr>
+                                <td>@user.FirstName </td>
+                                <td>@user.LastName</td>
+                                <td>@user.Email</td>
+                            </tr>
+                        }
+                    </tbody>
+                    <tfoot>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+        @if (TempData["Success"] != null)
+        {
+            <div class="alert alert-info alert-dismissible" role="alert">
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                @TempData["Success"]
+            </div>
+        }
+    </div>
+</div>
+

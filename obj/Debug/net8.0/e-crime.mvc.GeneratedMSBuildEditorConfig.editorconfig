@@ -1,0 +1,163 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = e_crime.mvc
+build_property.RootNamespace = e_crime.mvc
+build_property.ProjectDir = D:\Projects\e-crime.mvc\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Projects\e-crime.mvc
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Projects/e-crime.mvc/Views/Administration/AllRoles.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYXRpb25cQWxsUm9sZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/e-crime.mvc/Views/Administration/AllUsers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYXRpb25cQWxsVXNlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/e-crime.mvc/Views/Administration/CreateRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYXRpb25cQ3JlYXRlUm9sZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/e-crime.mvc/Views/Administration/EditRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYXRpb25cRWRpdFJvbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/e-crime.mvc/Views/Administration/EditUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYXRpb25cRWRpdFVzZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/e-crime.mvc/Views/Administration/EditUsersInRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYXRpb25cRWRpdFVzZXJzSW5Sb2xlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/e-crime.mvc/Views/Auth/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxBY2Nlc3NEZW5pZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/e-crime.mvc/Views/Auth/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxDaGFuZ2VQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/e-crime.mvc/Views/Auth/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/e-crime.mvc/Views/Auth/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/e-crime.mvc/Views/ContactUs/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/e-crime.mvc/Views/Crimes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3JpbWVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/e-crime.mvc/Views/Crimes/CrimeByPoliceStation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3JpbWVzXENyaW1lQnlQb2xpY2VTdGF0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/e-crime.mvc/Views/Crimes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3JpbWVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/e-crime.mvc/Views/Crimes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3JpbWVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/e-crime.mvc/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/e-crime.mvc/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/e-crime.mvc/Views/Home/SubmittedCrimes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTdWJtaXR0ZWRDcmltZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/e-crime.mvc/Views/PoliceStation/AddOfficer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWNlU3RhdGlvblxBZGRPZmZpY2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/e-crime.mvc/Views/PoliceStation/AddOfficers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWNlU3RhdGlvblxBZGRPZmZpY2Vycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/e-crime.mvc/Views/PoliceStation/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWNlU3RhdGlvblxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/e-crime.mvc/Views/PoliceStation/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWNlU3RhdGlvblxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/e-crime.mvc/Views/PoliceStation/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWNlU3RhdGlvblxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/e-crime.mvc/Views/PoliceStation/StationOfficers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWNlU3RhdGlvblxTdGF0aW9uT2ZmaWNlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/e-crime.mvc/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/e-crime.mvc/Views/Shared/NotFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE5vdEZvdW5kLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/e-crime.mvc/Views/Shared/_Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Gb290ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/e-crime.mvc/Views/Shared/_Left_Sidebar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MZWZ0X1NpZGViYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/e-crime.mvc/Views/Shared/_Main_Menu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NYWluX01lbnUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/e-crime.mvc/Views/Shared/_Page_Topbar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYWdlX1RvcGJhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/e-crime.mvc/Views/Shared/_Right_Sidebar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9SaWdodF9TaWRlYmFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/e-crime.mvc/Views/Shared/_Settings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TZXR0aW5ncy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/e-crime.mvc/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/e-crime.mvc/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/e-crime.mvc/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/e-crime.mvc/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-smc27cili0

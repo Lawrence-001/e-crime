@@ -1,0 +1,73 @@
+﻿@model EditCrimeVM
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box d-flex align-items-center justify-content-between">
+            <!--Start of Page Title-->
+            <h4 class="mb-0">Edit Crime</h4>
+            <!--End of Page Title-->
+            <!--Start of Breadcrumb-->
+            <div class="page-title-right">
+                <ol class="breadcrumb m-0">
+                    <li class="breadcrumb-item"><a href="javascript: void(0);"></a>E-Crime Portal</li>
+                    <li class="breadcrumb-item active">Edit Crime</li>
+                </ol>
+            </div>
+            <!--End of Breadcrumb-->
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="container-fluid  col-lg-8 col-md-6 col-sm-7">
+        <div class="card">
+            <div class="card-title text-center">
+                <h4 class="text-center">Edit crime</h4>
+            </div>
+            <div class="card-body">
+                <form class="form-group" method="post" asp-action="Edit" asp-controller="Crimes">
+                    <div class="text-danger" asp-validation-summary="ModelOnly">
+                        <input hidden asp-for="IsEdited" />
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <label asp-for="Location"></label>
+                            <input asp-for="Location" class="form-control" />
+                            <span asp-validation-for="Location" class="text-danger"></span>
+                        </div>
+                        <div class="col-lg-6">
+                            <label asp-for="CrimeType"></label>
+                            <select asp-for="CrimeType" class="form-control" asp-items="@Html.GetEnumSelectList<CrimeType>()">
+                                <option value="" selected>Select...</option>
+                            </select>
+                            <span asp-validation-for="CrimeType" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div>
+                        <label asp-for="DateTime"></label>
+                        <input type="datetime-local" asp-for="DateTime" class="form-control" onfocus="this.showPicker()" />
+                        <span asp-validation-for="DateTime" class="text-danger"></span>
+                    </div>
+                    <div>
+                        <label asp-for="Description"></label>
+                        <textarea asp-for="Description" class="form-control" rows="5" style="width:100%"></textarea>
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div><br />
+                    <div>
+                        <button type="submit" asp-action="Edit" asp-controller="Crimes" class="btn btn-outline-primary"> Submit</button>
+                        <a asp-action="SubmittedCrimes" asp-controller="Home" class="btn btn-outline-info float-right">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+</script>

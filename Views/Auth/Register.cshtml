@@ -1,0 +1,77 @@
+﻿@model RegistrationVM;
+@{
+    ViewBag.Title = "User registration";
+}
+
+<div class="row">
+    <div class="container-fluid  col-lg-8 col-md-6 col-sm-7">
+        <div class="card">
+            <div class="card-title text-center">
+                <h4 class="text-center mt-3">Register an Account</h4>
+            </div>
+            <div class="card-body">
+                <form method="post" asp-action="Register" asp-controller="Auth">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <label asp-for="FName"></label>
+                            <input asp-for="FName" class="form-control" placeholder="enter first name" />
+                            <span asp-validation-for="FName" class="text-danger"></span>
+                        </div>
+                        <div class="col-lg-6">
+                            <label asp-for="LName"></label>
+                            <input asp-for="LName" class="form-control" placeholder="enter last name" />
+                            <span asp-validation-for="LName" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <label asp-for="Address"></label>
+                            <input asp-for="Address" class="form-control" placeholder="enter address eg Fedha" />
+                            <span asp-validation-for="Address" class="text-danger"></span>
+                        </div>
+                        <div class="col-lg-6">
+                            <label asp-for="Gender"></label>
+                            <select asp-for="Gender" class="form-control" asp-items="@Html.GetEnumSelectList<Gender>()">
+                                <option value="" selected>Select...</option>
+                            </select>
+                            <span asp-validation-for="Gender" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <label asp-for="MobileNumber"></label>
+                            <input asp-for="MobileNumber" class="form-control" placeholder="enter mobile number" />
+                            <span asp-validation-for="MobileNumber" class="text-danger"></span>
+                        </div>
+                        <div class="col-lg-6">
+                            <label asp-for="Email"></label>
+                            <input asp-for="Email" class="form-control" placeholder="john@example.com" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <label asp-for="Password"></label>
+                            <input asp-for="Password" class="form-control" aria-describedby="passwordHelpBlock" />
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                        <div class="col-lg-6">
+                            <label asp-for="ConfirmPassword"></label>
+                            <input asp-for="ConfirmPassword" class="form-control" />
+                            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                        </div>
+                    </div> <span id="passwordHelpBlock" class="form-text">
+                        Password must be at least 8 characters long.
+                    </span><br />
+                    <div>
+                        <button type="submit" class="btn btn-success mb-2" asp-action="Register" asp-controller="Auth">Register</button>
+                    </div>
+                    <p> Already registered? <a asp-action="Login" asp-controller="Auth">Login here</a></p>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    </>

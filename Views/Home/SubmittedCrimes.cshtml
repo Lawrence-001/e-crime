@@ -1,0 +1,117 @@
+﻿@inject SignInManager<ApplicationUser> _signInManager
+@model IEnumerable<Crime>
+@{
+    ViewData["Title"] = "Submitted Crimes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section AppStyles {
+    <!-- DataTables -->
+    <link href="~/dist/assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/dist/assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Responsive datatable -->
+    <link href="~/dist/assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+}
+
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box d-flex align-items-center justify-content-between">
+            <!--Start of Page Title-->
+            <h4 class="mb-0">Submitted Cases</h4>
+            <!--End of Page Title-->
+            <!--Start of Breadcrumb-->
+            <div class="page-title-right">
+                <ol class="breadcrumb m-0">
+                    <li class="breadcrumb-item"><a href="javascript: void(0);"></a>E-Crime Portal</li>
+                    <li class="breadcrumb-item active">Submitted Cases</li>
+                </ol>
+            </div>
+            <!--End of Breadcrumb-->
+        </div>
+    </div>
+</div>
+
+<div class="row mb-4">
+    <div class="col-md-4 col-lg-4">
+        <a class="btn btn-primary" asp-action="Create" asp-controller="Crimes"> Submit a crime</a>
+        @if (_signInManager.IsSignedIn(User) && User.IsInRole("Officer"))
+        {
+            <a class="btn btn-info" asp-action="AssignedCrimes" asp-controller="Crimes"> View Assigned Cases</a>
+        }
+        @if (_signInManager.IsSignedIn(User) && User.IsInRole("Super Admin"))
+        {
+            <a class="btn btn-info" asp-action="Index" asp-controller="Crimes"> View All Submitted Cases</a>
+        }
+    </div>
+</div>
+
+<div class=" row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div>
+                    <p>The table below shows the list of submitted cases.</p>
+                </div>
+                <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                    <thead>
+                        <tr>
+                            <th>Location</th>
+                            <th>Type of Crime</th>
+                            <th>Date</th>
+                            <th>Description</th>
+                            <th>Status</th>
+                            <th class="4">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var crime in Model)
+                        {
+                            <tr>
+                                <td>@crime.Location</td>
+                                <td>@crime.CrimeType</td>
+                                <td>@crime.DateTime</td>
+                                <td>@crime.Description</td>
+                                <td>@crime.Status</td>
+                                <td class="4">
+                                    @if (!crime.IsEdited)
+                                    {
+                                        <a asp-action="Edit" asp-controller="Crimes" asp-route-id="@crime.Id">Edit</a>
+                                        <span class="text-danger">You can only edit once</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-danger">No more editing!</span>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div> <!-- end col -->
+</div> <!---end row ---->
+
+@section AppScripts {
+    <!-- Required datatable js -->
+    <script src="~/dist/assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="~/dist/assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <!-- Buttons examples -->
+    <script src="~/dist/assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="~/dist/assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+    <script src="~/dist/assets/libs/jszip/jszip.min.js"></script>
+    <script src="~/dist/assets/libs/pdfmake/build/pdfmake.min.js"></script>
+    <script src="~/dist/assets/libs/pdfmake/build/vfs_fonts.js"></script>
+    <script src="~/dist/assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="~/dist/assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="~/dist/assets/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+
+    <!-- Responsive examples -->
+    <script src="~/dist/assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="~/dist/assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+
+    <!-- Datatable init js -->
+    <script src="~/dist/assets/js/pages/datatables.init.js"></script>
+}

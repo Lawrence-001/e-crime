@@ -1,0 +1,42 @@
+﻿@model CreateRoleVM;
+@{
+    ViewBag.Title = "Creating Roles";
+}
+
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box d-flex align-items-center justify-content-between">
+            <!--Start of Page Title-->
+            <h4 class="mb-0">Create Role</h4>
+            <!--End of Page Title-->
+            <!--Start of Breadcrumb-->
+            <div class="page-title-right">
+                <ol class="breadcrumb m-0">
+                    <li class="breadcrumb-item"><a href="javascript: void(0);"></a>E-Crime Portal</li>
+                    <li class="breadcrumb-item active">Create Role</li>
+                </ol>
+            </div>
+            <!--End of Breadcrumb-->
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="container-fluid col-lg-7 col-md-6">
+        <div class="card">
+            <div class="card-title text-center">
+                <h5 class="text-center mt-2">Create roles below</h5>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                    <label asp-for="Name"></label>
+                    <input asp-for="Name" class="form-control" /> <br />
+                    <button type="submit" class="btn btn-primary" asp-action="CreateRole" asp-controller="Administration"> Create Role</button>
+                    <a asp-action="AllRoles" asp-controller="Administration" class="btn btn-secondary"> Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
