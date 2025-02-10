@@ -132,7 +132,7 @@ namespace e_crime.mvc.Controllers
 
         //public async Task<List<string>> GetOfficersIds(Func<Task<List<string>>> getOfficersEmails)
         //{
-        //    var emails = await getOfficersEmails(); // Invoke the function to get emails
+        //    var emails = await getOfficersEmails(); 
         //    var officerIds = new List<string>();
         //    foreach (var email in emails)
         //    {

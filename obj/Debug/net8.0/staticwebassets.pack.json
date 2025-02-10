@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "D:\\Projects\\e-crime.mvc\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\e-crime.mvc.bundle.scp.css",
-      "PackagePath": "staticwebassets\\e-crime.mvc.bundle.scp.css"
+      "PackagePath": "staticwebassets\\e-crime.mvc.ggktn8tvf1.bundle.scp.css"
     },
     {
       "Id": "D:\\Projects\\e-crime.mvc\\wwwroot\\css\\site.css",
@@ -6699,6 +6699,10 @@
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.e-crime.mvc.props",
       "PackagePath": "buildTransitive\\e-crime.mvc.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.e-crime.mvc.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.e-crime.mvc.Microsoft.AspNetCore.StaticWebAssets.props",

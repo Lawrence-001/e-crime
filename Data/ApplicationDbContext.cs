@@ -6,7 +6,6 @@ namespace e_crime.mvc.Data
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
         }
@@ -15,7 +14,7 @@ namespace e_crime.mvc.Data
         {
             base.OnModelCreating(builder);
 
-            //explicitly define the relationship, 1:m,  between police station and users(officers)
+            //define the relationship, 1:m,  between police station and users(officers)
             //and what happens if a police station is deleted.
             builder.Entity<ApplicationUser>()
                 .HasOne(p => p.PoliceStation)

@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Projects\\e-crime.mvc\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{917CA09F-CF62-4A10-8B57-7FE943D97517}|e-crime.mvc.csproj|d:\\projects\\e-crime.mvc\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{917CA09F-CF62-4A10-8B57-7FE943D97517}|e-crime.mvc.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{917CA09F-CF62-4A10-8B57-7FE943D97517}|e-crime.mvc.csproj|d:\\projects\\e-crime.mvc\\controllers\\policestationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{917CA09F-CF62-4A10-8B57-7FE943D97517}|e-crime.mvc.csproj|solutionrelative:controllers\\policestationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{917CA09F-CF62-4A10-8B57-7FE943D97517}|e-crime.mvc.csproj|d:\\projects\\e-crime.mvc\\controllers\\administrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{917CA09F-CF62-4A10-8B57-7FE943D97517}|e-crime.mvc.csproj|solutionrelative:controllers\\administrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\Projects\\e-crime.mvc\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\Projects\\e-crime.mvc\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAYwBAAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T15:44:10.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PoliceStationController.cs",
+              "DocumentMoniker": "D:\\Projects\\e-crime.mvc\\Controllers\\PoliceStationController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PoliceStationController.cs",
+              "ToolTip": "D:\\Projects\\e-crime.mvc\\Controllers\\PoliceStationController.cs",
+              "RelativeToolTip": "Controllers\\PoliceStationController.cs",
+              "ViewState": "AgIAAAsBAAAAAAAAAAAiwIYAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T15:43:29.191Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AdministrationController.cs",
+              "DocumentMoniker": "D:\\Projects\\e-crime.mvc\\Controllers\\AdministrationController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdministrationController.cs",
+              "ToolTip": "D:\\Projects\\e-crime.mvc\\Controllers\\AdministrationController.cs",
+              "RelativeToolTip": "Controllers\\AdministrationController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T15:39:55.797Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

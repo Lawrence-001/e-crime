@@ -3,24 +3,16 @@
   "WorkspaceRootPath": "D:\\Projects\\e-crime.mvc\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{917CA09F-CF62-4A10-8B57-7FE943D97517}|e-crime.mvc.csproj|d:\\projects\\e-crime.mvc\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{917CA09F-CF62-4A10-8B57-7FE943D97517}|e-crime.mvc.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{917CA09F-CF62-4A10-8B57-7FE943D97517}|e-crime.mvc.csproj|d:\\projects\\e-crime.mvc\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{917CA09F-CF62-4A10-8B57-7FE943D97517}|e-crime.mvc.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{917CA09F-CF62-4A10-8B57-7FE943D97517}|e-crime.mvc.csproj|d:\\projects\\e-crime.mvc\\controllers\\contactuscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{917CA09F-CF62-4A10-8B57-7FE943D97517}|e-crime.mvc.csproj|solutionrelative:controllers\\contactuscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{917CA09F-CF62-4A10-8B57-7FE943D97517}|e-crime.mvc.csproj|d:\\projects\\e-crime.mvc\\controllers\\policestationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{917CA09F-CF62-4A10-8B57-7FE943D97517}|e-crime.mvc.csproj|solutionrelative:controllers\\policestationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{917CA09F-CF62-4A10-8B57-7FE943D97517}|e-crime.mvc.csproj|d:\\projects\\e-crime.mvc\\views\\contactus\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{917CA09F-CF62-4A10-8B57-7FE943D97517}|e-crime.mvc.csproj|solutionrelative:views\\contactus\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{917CA09F-CF62-4A10-8B57-7FE943D97517}|e-crime.mvc.csproj|d:\\projects\\e-crime.mvc\\views\\auth\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{917CA09F-CF62-4A10-8B57-7FE943D97517}|e-crime.mvc.csproj|solutionrelative:views\\auth\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{917CA09F-CF62-4A10-8B57-7FE943D97517}|e-crime.mvc.csproj|d:\\projects\\e-crime.mvc\\viewmodels\\contactus\\contactusvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{917CA09F-CF62-4A10-8B57-7FE943D97517}|e-crime.mvc.csproj|solutionrelative:viewmodels\\contactus\\contactusvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{917CA09F-CF62-4A10-8B57-7FE943D97517}|e-crime.mvc.csproj|d:\\projects\\e-crime.mvc\\controllers\\administrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{917CA09F-CF62-4A10-8B57-7FE943D97517}|e-crime.mvc.csproj|solutionrelative:controllers\\administrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,68 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ContactUsVM.cs",
-              "DocumentMoniker": "D:\\Projects\\e-crime.mvc\\ViewModels\\ContactUs\\ContactUsVM.cs",
-              "RelativeDocumentMoniker": "ViewModels\\ContactUs\\ContactUsVM.cs",
-              "ToolTip": "D:\\Projects\\e-crime.mvc\\ViewModels\\ContactUs\\ContactUsVM.cs",
-              "RelativeToolTip": "ViewModels\\ContactUs\\ContactUsVM.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAArAAAA",
+              "DocumentIndex": 0,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\Projects\\e-crime.mvc\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\Projects\\e-crime.mvc\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAYwBAAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T14:37:06.132Z"
+              "WhenOpened": "2025-02-10T15:44:10.786Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ContactUsController.cs",
-              "DocumentMoniker": "D:\\Projects\\e-crime.mvc\\Controllers\\ContactUsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ContactUsController.cs",
-              "ToolTip": "D:\\Projects\\e-crime.mvc\\Controllers\\ContactUsController.cs",
-              "RelativeToolTip": "Controllers\\ContactUsController.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAwCIAAAAAAAAA",
+              "Title": "PoliceStationController.cs",
+              "DocumentMoniker": "D:\\Projects\\e-crime.mvc\\Controllers\\PoliceStationController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PoliceStationController.cs",
+              "ToolTip": "D:\\Projects\\e-crime.mvc\\Controllers\\PoliceStationController.cs",
+              "RelativeToolTip": "Controllers\\PoliceStationController.cs",
+              "ViewState": "AgIAAAsBAAAAAAAAAAAiwIYAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T13:48:05.295Z",
+              "WhenOpened": "2025-02-10T15:43:29.191Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Projects\\e-crime.mvc\\Views\\ContactUs\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\ContactUs\\Index.cshtml",
-              "ToolTip": "D:\\Projects\\e-crime.mvc\\Views\\ContactUs\\Index.cshtml",
-              "RelativeToolTip": "Views\\ContactUs\\Index.cshtml",
-              "ViewState": "AQIAADYAAAAAAAAAAAAAAEoAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-28T13:29:32.423Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ChangePassword.cshtml",
-              "DocumentMoniker": "D:\\Projects\\e-crime.mvc\\Views\\Auth\\ChangePassword.cshtml",
-              "RelativeDocumentMoniker": "Views\\Auth\\ChangePassword.cshtml",
-              "ToolTip": "D:\\Projects\\e-crime.mvc\\Views\\Auth\\ChangePassword.cshtml",
-              "RelativeToolTip": "Views\\Auth\\ChangePassword.cshtml",
-              "ViewState": "AQIAABsAAAAAAAAAAAAAACcAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-28T12:35:56.206Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\Projects\\e-crime.mvc\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
-              "ToolTip": "D:\\Projects\\e-crime.mvc\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "Controllers\\AuthController.cs",
-              "ViewState": "AQIAAJMAAAAAAAAAAAAQwKEAAAAXAAAA",
+              "Title": "AdministrationController.cs",
+              "DocumentMoniker": "D:\\Projects\\e-crime.mvc\\Controllers\\AdministrationController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdministrationController.cs",
+              "ToolTip": "D:\\Projects\\e-crime.mvc\\Controllers\\AdministrationController.cs",
+              "RelativeToolTip": "Controllers\\AdministrationController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T13:12:57.655Z",
+              "WhenOpened": "2025-02-10T15:39:55.797Z",
               "EditorCaption": ""
             }
           ]
